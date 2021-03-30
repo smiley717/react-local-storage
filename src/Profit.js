@@ -71,7 +71,7 @@ const Price = () => {
 
       <h2>Profit: {dprofit}$</h2>
 
-      <h3>Remain List</h3>
+      <h3>Remaining StockList</h3>
         <ul>
           {
             remainList.map((stockItem, index) => 
