@@ -1,32 +1,19 @@
 import React from 'react';
-
-const useStateWithLocalStorage = localStorageKey => {
-  const [value, setValue] = React.useState(
-    localStorage.getItem(localStorageKey) || ''
-  );
-
-  React.useEffect(() => {
-    localStorage.setItem(localStorageKey, value);
-  }, [value]);
-
-  return [value, setValue];
-};
+import Add from './Add';
+import Price from './Price';
+import Profit from './Profit'
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 const App = () => {
-  const [value, setValue] = useStateWithLocalStorage(
-    'myValueInLocalStorage'
-  );
-
-  const onChange = event => setValue(event.target.value);
 
   return (
-    <div>
-      <h1>Hello React with Local Storage!</h1>
-
-      <input value={value} type="text" onChange={onChange} />
-
-      <p>{value}</p>
-    </div>
+    <main>
+        <Switch>
+            <Route path="/" component={Add} exact />
+            <Route path="/price" component={Price} />
+            <Route path="/profit" component={Profit} />
+        </Switch>
+    </main>
   );
 };
 
