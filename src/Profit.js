@@ -69,7 +69,7 @@ const Price = () => {
 
       <button onClick={handleClickBack}>back</button>
 
-      <h2>Profit: {dprofit}</h2>
+      <h2>Profit: {dprofit}$</h2>
 
       <h3>Remain List</h3>
         <ul>

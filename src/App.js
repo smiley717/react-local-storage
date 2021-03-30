@@ -1,8 +1,8 @@
 import React from 'react';
 import Add from './Add';
-import Price from './Price';
+import Price from './Profit';
 import Profit from './Profit'
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 const App = () => {
 
@@ -10,7 +10,6 @@ const App = () => {
     <main>
         <Switch>
             <Route path="/" component={Add} exact />
-            <Route path="/price" component={Price} />
             <Route path="/profit" component={Profit} />
         </Switch>
     </main>

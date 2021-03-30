@@ -51,7 +51,7 @@ const Add = () => {
   }
 
   const handleClickNext = () => {
-    history.push('/price');
+    history.push('/profit');
   }
   return (
     <div>
